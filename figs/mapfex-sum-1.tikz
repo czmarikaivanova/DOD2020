@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=greennode] (5) at (8.75, 2) {$a_1$};
+		\node [style=greennode] (9) at (3, 0) {$a_2$};
+		\node [style=regnode, label={[xshift=18]below:$\alpha_+(a_2)$}] (19) at (3, 2) {};
+		\node [style=regnode, label={[xshift=10]below:$\alpha_+(a_1)$}] (20) at (0, 2) {};
+		\node [style=regnode] (21) at (2, 5) {};
+		\node [style=greencircle] (24) at (0, 2) {};
+		\node [style=greencircle] (26) at (3, 2) {};
+		\node [style=regnode] (27) at (6, 2) {};
+		\node [style=regnode] (28) at (4, 5) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (26) to (9);
+		\draw (26) to (27);
+		\draw (27) to (5);
+		\draw (26) to (24);
+		\draw (24) to (21);
+		\draw (21) to (28);
+		\draw (28) to (27);
+	\end{pgfonlayer}
+\end{tikzpicture}
